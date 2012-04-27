@@ -100,18 +100,6 @@ VasFlipStr.prototype={
 		p1_f0.css('opacity', 1).find('div').html(nextCh);
 		p0_f1.find('div').html(nextCh);
 	})),
-	_flipNext:eval(Jscex.compile('async', function(nextStr, time)
-	{
-		for (var i=0; i<this.len; i++)
-		{
-			var j=i-this.len+nextStr.length;
-			this._flip(
-				this.pos.find('.vas_flip_ch_'+i),
-				nextStr[j] || ' ',
-				200).start();
-			$await(Jscex.Async.sleep(10));
-		}
-	})),
 	flipNext:function(nextStr, time)
 	{
 		//this._flipNext(nextStr, time).start();
