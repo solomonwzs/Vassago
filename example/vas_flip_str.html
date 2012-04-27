@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+		
+		<script type="text/javascript" src="../js/jscex/src/jscex.js"></script>
+		<script type="text/javascript" 
+		 src="../js/jscex/src/jscex-parser.js"></script>
+		<script type="text/javascript" 
+		 src="../js/jscex/src/jscex-jit.js"></script>
+		<script type="text/javascript" 
+		 src="../js/jscex/src/jscex-builderbase.js"></script>
+		<script type="text/javascript" 
+		 src="../js/jscex/src/jscex-async.js"></script>
+		<script type="text/javascript" 
+		 src="../js/jscex/src/jscex-async-powerpack.js"></script>
+		<script type="text/javascript" 
+		 src="../js/jquery/jquery.min.js"></script>
+		<script type="text/javascript" src="../js/vas_flip_str.js"></script>
+		<link href="../css/vas_flip_str.css" type="text/css" rel="stylesheet"/>
+	</head>
+	<body>
+		<script type="text/javascript">
+			$(function()
+			{
+				var Num=new VasFlipStr({
+					str:'1,234,567,890',
+					pos:$('#test'),
+					width:50,
+					height:100,
+					fontSize:80
+				});
+				Num.flipNext('9,876,541.59', 50);
+			});
+		</script>
+		<div class="center" id="test">
+		</div>
+	</body>
+</html> 

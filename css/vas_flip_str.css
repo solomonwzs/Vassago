@@ -1,0 +1,26 @@
+.vas_flip_ch, .vas_flip_ch *
+{
+	float:left;
+	text-align:center;
+	position:relative;
+}
+.vas_flip_ch .vas_flip_ch_p
+{
+	position:absolute;
+}
+.vas_flip_ch .vas_flip_ch_f 
+{
+	overflow:hidden;
+}
+.vas_flip_ch .vas_flip_ch_f1
+{
+	/*-moz-transform:matrix(1, 0, 0, -1, 0, 0);
+	-webkit-transform:matrix(1, 0, 0, -1, 0, 0);*/
+	line-height:0;
+}
+.vas_flip_ch_f
+{
+	background:#fff;
+	box-shadow:0px 0px 10px rgba(0, 0, 0, .5) inset;
+	border-radius:5px;
+}
