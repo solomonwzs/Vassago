@@ -7,6 +7,8 @@ VasFlipStr=function(obj)
 	this.height=obj.height || 20;
 	this.fontSize=obj.fontSize || this.width;
 
+	this.pos.width(this.width*this.len)
+
 	if ($.browser.mozilla)
 	{
 		this.transform='-moz-transform';
@@ -61,8 +63,12 @@ VasFlipStr.prototype={
 			'width':this.width+'px', 
 			'height':this.height+'px'
 		}).find('.vas_flip_ch_f').css({
-			'width':this.width+'px',
-			'height':(this.height/2)+'px'
+			'width':this.width-2+'px',
+			'height':(this.height/2-4)+'px',
+			'border-top':'solid 2px #111',
+			'border-left':'solid 1px #111',
+			'border-bottom':'solid 2px #111',
+			'border-right':'solid 1px #111',
 		}).find('div').css({
 			'width':this.width+'px', 
 			'height':this.height+'px',
@@ -102,7 +108,6 @@ VasFlipStr.prototype={
 	})),
 	flipNext:function(nextStr, time)
 	{
-		//this._flipNext(nextStr, time).start();
 		for (var i=0; i<this.len; i++)
 		{
 			var j=i-this.len+nextStr.length;

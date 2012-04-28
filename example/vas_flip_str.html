@@ -28,12 +28,16 @@
 					pos:$('#test'),
 					width:50,
 					height:100,
-					fontSize:80
+					fontSize:70
 				});
-				Num.flipNext('9,876,541.59', 50);
+				$('#btn').click(function()
+				{
+					Num.flipNext('9,876,541.59', 500);
+				})
 			});
 		</script>
 		<div class="center" id="test">
 		</div>
+		<p><input value="click" type="button" id="btn"></p>
 	</body>
 </html> 
